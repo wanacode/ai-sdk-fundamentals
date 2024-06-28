@@ -8,7 +8,7 @@ import { useTTS } from '@cartesia/cartesia-js/react';
 
 function TextToSpeech() {
 	const tts = useTTS({
-		apiKey: "",
+		apiKey: process.env.NEXT_PUBLIC_CARTESIA_API_KEY,
 		sampleRate: 44100,
 	})
 
