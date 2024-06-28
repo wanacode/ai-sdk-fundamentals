@@ -1,12 +1,11 @@
-import { openai } from "@ai-sdk/openai";
+import { mistral } from "@ai-sdk/mistral";
 import { generateText } from "ai";
 import dotenv from "dotenv";
-
 dotenv.config();
 
 async function main() {
   const result = await generateText({
-    model: openai("gpt-4o"),
+    model: mistral('mistral-large-latest'),
     prompt: "Tell me a joke.",
   });
 

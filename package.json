@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/mistral": "^0.0.20",
     "@ai-sdk/openai": "^0.0.4",
+    "@cartesia/cartesia-js": "^1.0.0",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-slot": "^1.0.2",
     "ai": "^3.1.9",
