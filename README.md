@@ -4,6 +4,8 @@
 
 Using Mistral API key.
 
+Cartesia component is working but need to use .env value correctly. How to use in `app` client v server side.
+
 Generate UI is working
 - http://localhost:3000/examples/generate-ui-streamui
 - The idea would be to add ability to upload an image and send that
