@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@ai-sdk/anthropic':
+        specifier: ^0.0.27
+        version: 0.0.27(zod@3.23.8)
       '@ai-sdk/mistral':
         specifier: ^0.0.20
         version: 0.0.20(zod@3.23.8)
@@ -95,6 +98,12 @@ importers:
         version: 5.4.5
 
 packages:
+
+  '@ai-sdk/anthropic@0.0.27':
+    resolution: {integrity: sha512-SmWf4YnyAmPag6XMXK8rhvmwvzuD6+KW9jeyvvIHAQDDu3HqOKTuAEQ19UOSLkThyEqV6PyO4GAwbrTeOKpecA==}
+    engines: {node: '>=18'}
+    peerDependencies:
+      zod: ^3.0.0
 
   '@ai-sdk/mistral@0.0.20':
     resolution: {integrity: sha512-PqRGrBIXN+e1Doxi3eyWNX4XFlIKrku5aqb96+fozHWVpk+TIRGhaXRxZm4quDG5QvdpLlk7nUKbOwsjK6XGYg==}
@@ -2129,6 +2138,12 @@ packages:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
 snapshots:
+
+  '@ai-sdk/anthropic@0.0.27(zod@3.23.8)':
+    dependencies:
+      '@ai-sdk/provider': 0.0.11
+      '@ai-sdk/provider-utils': 1.0.0(zod@3.23.8)
+      zod: 3.23.8
 
   '@ai-sdk/mistral@0.0.20(zod@3.23.8)':
     dependencies:

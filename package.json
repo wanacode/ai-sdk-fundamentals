@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/anthropic": "^0.0.27",
     "@ai-sdk/mistral": "^0.0.20",
     "@ai-sdk/openai": "^0.0.4",
     "@cartesia/cartesia-js": "^1.0.0",

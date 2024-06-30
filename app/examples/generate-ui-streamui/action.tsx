@@ -2,6 +2,7 @@
 
 import { createAI, getMutableAIState, streamUI } from "ai/rsc";
 import { mistral } from "@ai-sdk/mistral";
+import { anthropic } from "@ai-sdk/anthropic";
 import { ReactNode } from "react";
 import { z } from "zod";
 import { nanoid } from "nanoid";
@@ -21,14 +22,14 @@ export interface ClientMessage {
 }
 
 export async function continueConversation(
-  input: string,
+  input: string
 ): Promise<ClientMessage> {
   "use server";
 
   const history = getMutableAIState();
 
   const result = await streamUI({
-    model: mistral("mistral-large-latest"),
+    model: anthropic("claude-3-haiku-20240307"),
     messages: [...history.get(), { role: "user", content: input }],
     text: ({ content, done }) => {
       if (done) {
@@ -42,20 +43,24 @@ export async function continueConversation(
     },
     tools: {
       tellAJoke: {
-        description: "Tell a joke",
+        description: "Tell a story",
         parameters: z.object({
           location: z.string().describe("the users location"),
         }),
         generate: async function* ({ location }) {
           yield <div>loading...</div>;
           const joke = await generateObject({
-            model: mistral("mistral-large-latest"),
+            model: anthropic("claude-3-haiku-20240307"),
             schema: jokeSchema,
             prompt:
-              "Generate a joke that incorporates the following location:" +
+              "Generate the start of a story with a strong hook that incorporates the following location:" +
               location,
           });
-          return <JokeComponent joke={joke.object} />;
+          return (
+            <>
+              <JokeComponent joke={joke.object} />
+            </>
+          );
         },
       },
     },
