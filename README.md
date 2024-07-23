@@ -2,6 +2,10 @@
 
 ## Notes
 
+Hacking around with the AI SDK Fundamentals repo from Vercel. I managed to get it working with Mistral and I changed the Generate-UI-StreamUI page to output audio with Cartesia. If you paste text into the "Add to Queue" field. You have to paste because it keeps clearing the text field. Add Cartesia with a Provider but now I have a repo that can do Cartesia server side, see voice-agent repo.
+
+Have moved on to other repos now.
+
 Using Mistral API key.
 
 Cartesia component is working but need to use .env value correctly. How to use in `app` client v server side.
